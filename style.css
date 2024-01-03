@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    block-size: border-box ;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+*::selection{
+color: white;
+background-color: black;
+}
+
+html,body{
+    height:100%;
+    width: 99.5%;
+}
+body{
+  background-color: #FFF7F7;
+}
+#nav{
+
+/* height: 100px; */
+width: 100%;
+/* background-color: aquamarine; */
+position: fixed;
+z-index: 99;
+padding: 24px;
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+}
+#nav-part1{
+    /* background-color: rebeccapurple; */
+   overflow: hidden;
+    height: 82px;
+   
+}
+#nav-part1 svg{
+ 
+     display: block;
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+justify-content: space-between;
+gap: 60px;
+margin-right: 50px;
+}
+
+
+#nav-part2 a{
+    font-family:  Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 4px;
+
+    text-decoration: none;
+    font-size: 12px;
+    font-weight:500;
+    color: #000000;
+}
+ #icons i{
+    font-size: 18px;
+    margin-top: 50px;
+    margin-right: 20px;
+    margin-left: 26px;
+    font-weight: 100;
+   
+}
+#icons{
+    border-radius: 50px;
+    background-color: #f7f7f7;
+}
+
+.gap{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top:50px;
+    left: 100px;
+}
+
+#cursor{
+height: 10vw;
+width: 10vw;
+border-radius: 50%;
+background-color: blanchedalmond;
+position: fixed;
+transform: translate(-50%,-50%) scale(0);
+/* z-index: 9; */
+
+}
+
+
+#page1{
+    min-height: 100vh;
+    width: 99%;
+    position: relative;
+    padding: 0 1vw;
+    padding-top: 20vh;
+    /* background-color: aqua; */
+
+}
+#page1 h1{
+    font-size: 15vw;
+    text-transform: uppercase;
+    font-family: futura;
+    line-height: 14vw;
+    letter-spacing: -8px;
+    text-align: center;
+}
+
+#video-container{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    /* background-color: aquamarine; */
+    margin-top: 1vw;
+}
+#video-container video{
+    height: 100%;
+    width: 100%;
+    /* background-color: aquamarine; */
+    margin-top: 1vw;
+    object-fit: cover;
+}
+#video-container .play{
+    padding: 2vw 1.2vw;  
+    font-family: futura;
+    font-size: 1.4vw;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+   position: fixed;
+   opacity: 0;
+    scale: 0;
+}
+
+#page2{
+
+    /* background-color: red; */
+
+    min-height: 100vh;
+    width: 96%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw 2.5vw;
+    /* padding-right: 20px; */
+    
+}
+#page2 .elem{
+    height: 100%;
+    width: 30%;
+    /* padding: 0 1.5vw; */
+/* overflow: hidden; */
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+    
+}
+#page2 .elem .dets{
+height: 50px;
+width: 70%;
+background-color: blue;
+position: absolute;
+z-index: 9;
+/* top: 50%;
+left: 50%;
+transform:translate(-50%,-50% ); */
+border-radius: 24px;
+}
+
+#page2 .elem .dets:hover{
+
+    height: 100px;
+}
+
+#page3 {
+    min-height: 120vh;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+.child{
+    height: 55vh;
+    width: 40vw;
+    /* background-color: blue; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.child img{
+
+    height: 100%;
+
+}
+
+
+@media (max-width:600px) {
+
+    html,body{
+        height:100%;
+        width: 100%;
+    }
+
+    #page1 h1{
+        font-size: 15.5vw;
+    
+       
+        letter-spacing: -3px;
+    }
+
+    #page1{
+        min-height: 30vh;
+        width: 100%;
+  
+        padding: 0 2vw;
+        padding-top: 25vh;
+        /* background-color: aqua; */
+    
+    }
+    
+    #video-container{
+        height: 25vh;
+        width: 100%;
+        margin-right: 3vw;
+    
+        margin-top: 3vw;
+    }
+    
+
+    #video-container video{
+        height: 100%;
+        width: 96%;
+        /* background-color: aquamarine; */
+        margin-top: 1vw;
+        object-fit: cover;
+    }
+
+
+    #video-container .play{
+        padding: 8vw 6vw;  
+       
+        font-size: 4vw;
+
+       
+        position: absolute;
+        top: 30%;
+        left: 35%;
+        opacity: 1;
+        scale: 1;
+    }
+
+    #page2{
+
+        min-height: 100vh;
+        width: 96%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5vw 2vw;
+      
+        
+    }
+    #page2 .elem{
+        height: 100vh;
+        width: 100%;
+    overflow: hidden;
+    margin-bottom: 3vw;
+  
+        
+    }
+    
+}
